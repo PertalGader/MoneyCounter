@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "477881435037",
+    "firebase_url": "https://moneycounter-22306.firebaseio.com",
+    "project_id": "moneycounter-22306",
+    "storage_bucket": "moneycounter-22306.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477881435037:android:96c89a13e398155da72574",
+        "android_client_info": {
+          "package_name": "com.example.moneycounter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477881435037-guuondbfo9qeq0nri8i52d0lqpktie4v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.moneycounter",
+            "certificate_hash": "1db9a292eefe01076d76d4b4642baa7a1b31b7b1"
+          }
+        },
+        {
+          "client_id": "477881435037-1omkfvq9arj1sc6e6aud8iabi0skg48k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASPWaIv41RwF2T9ffqLZrOkC03uuv9w5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477881435037-1omkfvq9arj1sc6e6aud8iabi0skg48k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

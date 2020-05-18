@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/layout_bg">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="20dp"
+                android:padding="10dp"
+                android:text="Adding new Spending"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="#26a626" />
+
+            <Spinner
+                android:id="@+id/category_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/textView10"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/date_spinner"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/category_spinner"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/time_spinner"
+                android:layout_marginTop="30dp"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:onClick="setDate"
+                />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@id/date_spinner"
+                android:layout_toStartOf="@id/time_spinner"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/textColor" />
+
+            <TextView
+                android:id="@+id/time_spinner"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/category_spinner"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:onClick="setTime"
+                />
+
+            <View
+                android:id="@+id/separator1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@id/time_spinner"
+                android:layout_toEndOf="@id/date_spinner"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/textColor" />
+
+            <Button
+                android:id="@+id/accept_spending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/spending_note_editText"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_bg"
+                android:onClick="addNewSpending"
+                android:padding="10dp"
+                android:text="Add spending"
+                android:textSize="18sp"
+                android:textAllCaps="false"/>
+
+            <EditText
+                android:id="@+id/spending_name_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date_spinner"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/spending_sum_editText"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:inputType="text"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:hint="Spending name"
+                />
+
+            <EditText
+                android:id="@+id/spending_sum_editText"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/time_spinner"
+                android:layout_toStartOf="@id/time_spinner"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:inputType="number"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:hint="Sum"
+                />
+
+            <EditText
+                android:id="@+id/spending_note_editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spending_name_editText"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:padding="10dp"
+                android:inputType="text"
+                android:textSize="18sp"
+                android:hint="Note" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_above="@id/category_spinner"
+                android:layout_marginStart="5dp"
+                android:text="Category:" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/date_spinner"
+                android:layout_below="@id/category_spinner"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="0dp"
+                android:text="Date:" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/time_spinner"
+                android:layout_below="@id/category_spinner"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="0dp"
+                android:text="Time:" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/spending_name_editText"
+                android:layout_below="@id/date_spinner"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="0dp"
+                android:text="Spending Name:" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/spending_sum_editText"                android:layout_below="@id/date_spinner"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Sum:" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/spending_note_editText"
+                android:layout_below="@id/spending_name_editText"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="0dp"
+                android:text="Note:" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
